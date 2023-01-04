@@ -1,0 +1,18 @@
+<ul class="list-group">
+    <ng-container *ngIf="userId; else pleaseRegisterTemp">
+        <li class="list-group-item" *ngFor="let m of (messages$ | async)">
+            <div>
+                <h5>{{(user$ | async)?.name}}</h5>
+                <small>{{m.createdAt | date: 'MM/dd/yyyy hh:mm:ss'}}</small>
+                <p>
+                    {{m.title}}
+                </p>
+            </div>
+        </li>
+    </ng-container>
+    <ng-template #pleaseRegisterTemp>
+        <li class="list-group-item">
+            <h3 class="ui-icon-alert">Please register first.</h3>
+        </li>
+    </ng-template>
+</ul>

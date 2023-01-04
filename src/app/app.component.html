@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center">Redux stupid chat</h1>
+    </div>
+  </div>
+  <div class="row  mt-5">
+    <div class="col-6">
+      <lib-register (register)="registerUser($event,'left')"></lib-register>
+      <hr>
+      <app-chat-list [userId]="rightUserId$ | async"></app-chat-list>
+    </div>
+    <div class="col-6">
+      <lib-register (register)="registerUser($event,'right')"></lib-register>
+      <hr>
+      <app-chat-list [userId]="leftUserId$ | async"></app-chat-list>
+    </div>
+  </div>
+</div>
