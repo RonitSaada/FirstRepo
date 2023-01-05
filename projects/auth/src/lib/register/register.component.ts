@@ -6,7 +6,7 @@ import { NgForm } from '@angular/forms'
 @Component({
   selector: 'lib-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styles: []
 })
 export class RegisterComponent implements OnInit {
 
