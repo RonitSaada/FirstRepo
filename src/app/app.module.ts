@@ -13,6 +13,7 @@ import { entityConfig } from './entity-metadata';
 import { UsersModule } from 'src/users/users.module';
 import { HttpClientModule } from '@angular/common/http'
 import { MeesagesModule } from 'src/meesages/meesages.module';
+import {FormsModule} from '@angular/forms'
 
 /**
  * 
@@ -39,7 +40,8 @@ import { MeesagesModule } from 'src/meesages/meesages.module';
 
 
 import { AuthModule } from 'auth';
-import { ChatListComponent } from './chat-list/chat-list.component'//'@umtb/auth'
+import { ChatListComponent } from './chat-list/chat-list.component';
+import { CreateMessageComponent } from './create-message/create-message.component'//'@umtb/auth'
 //האימורט זה הקוד פיתוח
 //אם משתמשים בחבילה מספר אפליקציות שונות אז כולן תלויות בחבילה הזו
 //זה אומר שאם נשנה את הסיפריה אנחנו פוטנציאלית נשבור הרבה דברים
@@ -53,7 +55,8 @@ import { ChatListComponent } from './chat-list/chat-list.component'//'@umtb/auth
 @NgModule({
   declarations: [
     AppComponent,
-    ChatListComponent
+    ChatListComponent,
+    CreateMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +74,7 @@ import { ChatListComponent } from './chat-list/chat-list.component'//'@umtb/auth
     HttpClientModule,
     MeesagesModule,
     AuthModule,
+    FormsModule
 
   ],
   providers: [{
