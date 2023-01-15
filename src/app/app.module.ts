@@ -39,7 +39,8 @@ import { MeesagesModule } from 'src/meesages/meesages.module';
 
 
 import { AuthModule } from 'auth';
-import { ChatListComponent } from './chat-list/chat-list.component'//'@umtb/auth'
+import { ChatListComponent } from './chat-list/chat-list.component';
+import { CreateMessageComponent } from './create-message/create-message.component'//'@umtb/auth'
 //האימורט זה הקוד פיתוח
 //אם משתמשים בחבילה מספר אפליקציות שונות אז כולן תלויות בחבילה הזו
 //זה אומר שאם נשנה את הסיפריה אנחנו פוטנציאלית נשבור הרבה דברים
@@ -49,11 +50,13 @@ import { ChatListComponent } from './chat-list/chat-list.component'//'@umtb/auth
 //את הגרסה החדשה
 //באפליקציות לא נצרוך את הקוד מקור אלא נצרוך גרסה מסויימת 
 
+import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChatListComponent
+    ChatListComponent,
+    CreateMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +74,7 @@ import { ChatListComponent } from './chat-list/chat-list.component'//'@umtb/auth
     HttpClientModule,
     MeesagesModule,
     AuthModule,
-
+    FormsModule
   ],
   providers: [{
     provide: DefaultDataServiceConfig, useValue: {

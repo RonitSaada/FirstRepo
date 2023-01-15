@@ -24,5 +24,5 @@ export const initialState: State = {
 
 export const reducer = createReducer(
   initialState,
-  on(SetRegisteredUser, (state, action) => ({ ...state, [action.side + 'User']: Math.floor(1000 * Math.random())/*action.id בגלל שאנחנו עובדים מול פייק סרביס הוא תמיד יחזיר לנו את אותו המספר ואנו צריכים מזהה יחודי*/ }))
+  on(SetRegisteredUser, (state, action) => ({ ...state, [action.side + 'User']: action.side == "right" ? 2 : 6/*action.id בגלל שאנחנו עובדים מול פייק סרביס הוא תמיד יחזיר לנו את אותו המספר ואנו צריכים מזהה יחודי*/ }))
 );

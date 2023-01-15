@@ -1,0 +1,14 @@
+<form #createForm="ngForm" (ngSubmit)="createMessage(createForm)"  *ngIf="userId; else pleaseRegister">
+    <div class="form-group">
+        <input type="text" class="form-control" name="message" ngModel />
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-praimry">Send</button>
+    </div>
+
+</form>
+<ng-template #pleaseRegister>
+   
+        <div>please register</div>
+   
+</ng-template>

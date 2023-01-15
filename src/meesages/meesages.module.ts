@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ENTITY_METADATA_TOKEN, PLURAL_NAMES_TOKEN } from '@ngrx/data';
 import { EffectsModule } from '@ngrx/effects';
 import { MessagesEffects } from './messages.effects';
+import { tokenName } from '@angular/compiler';
 
 
 
@@ -23,7 +24,7 @@ PS C:\Users\97254\Documents\Asus PC\advanced Angular\test\ngrx-ex\src\meesages> 
   providers:[
     {
       provide: ENTITY_METADATA_TOKEN, multi: true, useValue: {  //   השורה הזו אומרת לאנגולר דטה שיהיה מוכן לנהל עבורינו מפתח של יוזרז עם מידע שנלקח מהשרת ומסונכרן מהשרת
-        Messages: {}   //כבר מהשורה הזו נוצר לנו סרביס של יוזרס שיכול לבצע קריאות לשרת לכתובת של יוזרס 
+        Messages:{}   //כבר מהשורה הזו נוצר לנו סרביס של יוזרס שיכול לבצע קריאות לשרת לכתובת של יוזרס 
         //הכתובת לשרת זוהי כתובת דיפולטיביט. נשנה אותה ברמה כל האפליקציה
         //באפ מודול של כל האפליקציה בהנחה שיש כתובות אחת זהה לכל הסרביסים באפליקציה הזו
       }

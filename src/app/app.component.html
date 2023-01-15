@@ -9,11 +9,15 @@
       <lib-register (register)="registerUser($event,'left')"></lib-register>
       <hr>
       <app-chat-list [userId]="rightUserId$ | async"></app-chat-list>
+      <hr>
+      <app-create-message [userId]="leftUserId$ | async"></app-create-message>
     </div>
     <div class="col-6">
       <lib-register (register)="registerUser($event,'right')"></lib-register>
       <hr>
       <app-chat-list [userId]="leftUserId$ | async"></app-chat-list>
+      <hr>
+      <app-create-message [userId]="rightUserId$ | async"></app-create-message>
     </div>
   </div>
 </div>
